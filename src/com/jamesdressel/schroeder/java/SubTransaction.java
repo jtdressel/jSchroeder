@@ -8,7 +8,7 @@ public class SubTransaction {
 	}
 	
 	public long getAmount(){
-		return 0;
+		return amount;
 	}
 
 	public void setAmount(long amount) {

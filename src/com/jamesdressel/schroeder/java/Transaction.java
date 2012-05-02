@@ -1,5 +1,6 @@
 package com.jamesdressel.schroeder.java;
 import java.util.Set;
+import java.util.HashSet;
 import java.util.Date;
 import java.util.UUID;
 
@@ -14,4 +15,12 @@ public class Transaction {
 	UUID id;
 	Date date;
 	
+	public Transaction(){
+		subTransactions = new HashSet<SubTransaction>();
+		memo = "";
+	}
+	
+	public String getMemo(){
+		return memo;
+	}
 }

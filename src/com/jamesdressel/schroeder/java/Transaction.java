@@ -27,4 +27,14 @@ public class Transaction {
 	public void setMemo(String memo){
 		this.memo = memo;
 	}
+	
+	public void addSubTransaction(SubTransaction subTrans){
+		
+	}
+	
+	public Set getSubTransactions(){
+		return null;
+	}
+	
+	
 }

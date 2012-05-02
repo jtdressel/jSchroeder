@@ -1,14 +1,19 @@
 package com.jamesdressel.schroeder.java;
 
 public class SubTransaction {
-	int amount;
+	long amount;
 	
 	public SubTransaction(){
-		amount = 0;
+		amount = 0L;
 	}
 	
 	public long getAmount(){
 		return 0;
+	}
+
+	public void setAmount(long amount) {
+		this.amount = amount;
+		
 	}
 	
 }

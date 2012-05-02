@@ -9,7 +9,13 @@ public class TransactionTest {
 	@Test
 	public void testDefaultMemo() {
 		Transaction example = new Transaction();
-		assertEquals(example.getMemo(), "");
+		assertEquals(example.getMemo(), "");	
+	}
+	
+	@Test
+	public void testGroceryMemo(){
+		Transaction example = new Transaction();
+		example.setMemo("Groceries");
 	}
 
 }

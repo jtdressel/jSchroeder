@@ -54,4 +54,17 @@ public class TransactionTest {
 		assertFalse(example.getSubTransactions().contains(one));
 		assertTrue(example.getSubTransactions().contains(two));
 	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void testRemoveMissingSubTransaction(){
+		example.addSubTransaction(one);
+		example.addSubTransaction(two);
+		SubTransaction three = new SubTransaction();
+		
+		assertFalse(example.getSubTransactions().contains(three));
+		example.removeSubTransaction(three);
+		
+		
+	}
+	
 }

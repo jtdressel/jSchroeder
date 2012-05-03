@@ -16,6 +16,7 @@ public class TransactionTest {
 	public void testGroceryMemo(){
 		Transaction example = new Transaction();
 		example.setMemo("Groceries");
+		assertEquals("Groceries", example.getMemo());
 	}
 
 }

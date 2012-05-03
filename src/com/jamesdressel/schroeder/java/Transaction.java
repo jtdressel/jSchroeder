@@ -49,6 +49,10 @@ public class Transaction {
 		subTransactions.remove(subTrans);
 	}
 	
+	/**
+	 * Test to see if all of the subTransactions balance. 
+	 * @return true if the transaction is balanced, otherwise false.
+	 */
 	public boolean isBalanced(){
 		long total = 0L;
 		for(SubTransaction trans: subTransactions){

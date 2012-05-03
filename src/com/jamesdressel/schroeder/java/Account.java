@@ -30,11 +30,11 @@ public class Account {
 	}
 	
 	public void addTransaction(Transaction trans){
-		
+		transactions.add(trans);
 	}
 	
-	public Set getTransactions(){
-		return null;
+	public Set<Transaction> getTransactions(){
+		return transactions;
 	}
 	
 

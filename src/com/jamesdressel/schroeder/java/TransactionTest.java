@@ -123,4 +123,19 @@ public class TransactionTest {
 		assertTrue(to.getTransactions().contains(trans));	
 		
 	}
+	
+	@Test(expected = IllegalStateException.class)
+	public void testProcessUnBalanced(){
+		assertFalse(from.getTransactions().contains(trans));
+		assertFalse(to.getTransactions().contains(trans));
+		one.setAccount(from);
+		three.setAccount(to);
+		
+		trans.addSubTransaction(one);
+		trans.addSubTransaction(three);
+		
+		trans.process();
+		
+	}
+	
 }

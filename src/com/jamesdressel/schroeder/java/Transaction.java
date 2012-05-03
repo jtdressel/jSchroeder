@@ -66,6 +66,7 @@ public class Transaction {
 	
 	/**
 	 * Takes the Transaction, checks that its balanced, and then adds it to the effected accounts. 
+	 * @throws IllegalStateException if the transaction is not balanced
 	 */
 	public void process(){
 		if(isBalanced()){

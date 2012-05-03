@@ -31,7 +31,7 @@ public class TransactionTest {
 		example.addSubTransaction(two);
 		
 		assertTrue(example.getSubTransactions().contains(one));
-		assertTrue(example.getSubTransactions().contains(one));
+		assertTrue(example.getSubTransactions().contains(two));
 	}
 
 }

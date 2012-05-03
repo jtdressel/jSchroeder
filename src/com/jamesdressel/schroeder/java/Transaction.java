@@ -32,7 +32,7 @@ public class Transaction {
 		subTransactions.add(subTrans);
 	}
 	
-	public Set getSubTransactions(){
+	public Set<SubTransaction> getSubTransactions(){
 		return subTransactions;
 	}
 	

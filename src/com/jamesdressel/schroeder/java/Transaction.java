@@ -7,7 +7,7 @@ import java.util.UUID;
 /* The transaction class is used to represent a single transaction, such as 
  * buying groceries, or getting paid. There are at least two SubTransactions
  * one debiting an account, one crediting an account. In addition there is a 
- * memo line, date/time,  and guid.
+ * memo line, date/time, and UUID.
  */
 public class Transaction {
 	Set<SubTransaction> subTransactions;

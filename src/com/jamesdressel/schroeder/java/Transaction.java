@@ -29,11 +29,11 @@ public class Transaction {
 	}
 	
 	public void addSubTransaction(SubTransaction subTrans){
-		
+		subTransactions.add(subTrans);
 	}
 	
 	public Set getSubTransactions(){
-		return null;
+		return subTransactions;
 	}
 	
 	

@@ -76,4 +76,12 @@ public class TransactionTest {
 		assertFalse(example.isBalanced());
 	}
 	
+	@Test
+	public void testIsBalancedBalanced(){
+		example.addSubTransaction(one);
+		example.addSubTransaction(two);
+		
+		assertTrue(example.isBalanced());
+	}
+	
 }

@@ -36,8 +36,13 @@ public class Transaction {
 		return subTransactions;
 	}
 	
+	/**
+	 * Removes a SubTransaction from the transaction.
+	 * @param subTrans to be removed. 
+	 * 
+	 */
 	public void removeSubTransaction(SubTransaction subTrans){
-		
+		subTransactions.remove(subTrans);
 	}
 	
 	

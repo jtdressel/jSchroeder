@@ -18,5 +18,20 @@ public class TransactionTest {
 		example.setMemo("Groceries");
 		assertEquals("Groceries", example.getMemo());
 	}
+	
+	@Test
+	public void testSetSubTransactions(){
+		SubTransaction one = new SubTransaction();
+		SubTransaction two = new SubTransaction();
+		one.setAmount(32432);
+		two.setAmount(32);
+		
+		Transaction example = new Transaction();
+		example.addSubTransaction(one);
+		example.addSubTransaction(two);
+		
+		assertTrue(example.getSubTransactions().contains(one));
+		assertTrue(example.getSubTransactions().contains(one));
+	}
 
 }

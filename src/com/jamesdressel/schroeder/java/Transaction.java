@@ -39,9 +39,13 @@ public class Transaction {
 	/**
 	 * Removes a SubTransaction from the transaction.
 	 * @param subTrans to be removed. 
-	 * 
+	 * @throws IllegalArgumentException if subTrans is not in the transaction.
 	 */
 	public void removeSubTransaction(SubTransaction subTrans){
+		if(!subTransactions.contains(subTrans)){
+			throw new IllegalArgumentException("The provided subtransaction is not part of the transaction.");
+		}
+		
 		subTransactions.remove(subTrans);
 	}
 	

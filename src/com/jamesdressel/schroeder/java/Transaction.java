@@ -50,6 +50,13 @@ public class Transaction {
 	}
 	
 	public boolean isBalanced(){
+		long total = 0L;
+		for(SubTransaction trans: subTransactions){
+			total += trans.getAmount();
+		}
+		if(total == 0L){
+			return true;
+		}
 		return false;
 	}
 	

@@ -19,6 +19,12 @@ public class SubTransactionTest {
 		assertEquals(anExample.getAmount(), 3L);
 	}
 
-
+	@Test
+	public void testAccountSetAndGet(){
+		SubTransaction example = new SubTransaction();
+		Account anAccount = new Account();
+		example.setAccount(anAccount);
+		assertEquals(anAccount, example.getAccount());
+	}
 
 }

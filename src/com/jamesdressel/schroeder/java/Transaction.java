@@ -64,5 +64,11 @@ public class Transaction {
 		return false;
 	}
 	
+	/**
+	 * Takes the Transaction, checks that its balanced, and then adds it to the effected accounts. 
+	 */
+	public void process(){
+		
+	}
 	
 }

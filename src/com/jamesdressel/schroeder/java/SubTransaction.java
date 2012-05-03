@@ -25,11 +25,11 @@ public class SubTransaction {
 	}
 	
 	public void setAccount(Account account){
-		
+		this.account = account;
 	}
 	
 	public Account getAccount(){
-		return null;
+		return account;
 	}
 	
 }

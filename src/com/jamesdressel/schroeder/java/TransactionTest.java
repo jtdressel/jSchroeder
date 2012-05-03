@@ -34,4 +34,22 @@ public class TransactionTest {
 		assertTrue(example.getSubTransactions().contains(two));
 	}
 
+	@Test
+	public void testRemoveSubTransaction(){
+		SubTransaction one = new SubTransaction();
+		SubTransaction two = new SubTransaction();
+		one.setAmount(32432);
+		two.setAmount(32);
+		
+		Transaction example = new Transaction();
+		example.addSubTransaction(one);
+		example.addSubTransaction(two);
+		
+		assertTrue(example.getSubTransactions().contains(one));
+		assertTrue(example.getSubTransactions().contains(two));
+	
+		example.removeSubTransaction(one);
+		assertFalse(example.getSubTransactions().contains(one));
+		assertTrue(example.getSubTransactions().contains(two));
+	}
 }

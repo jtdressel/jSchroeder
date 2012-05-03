@@ -36,5 +36,9 @@ public class Transaction {
 		return subTransactions;
 	}
 	
+	public void removeSubTransaction(SubTransaction subTrans){
+		
+	}
+	
 	
 }

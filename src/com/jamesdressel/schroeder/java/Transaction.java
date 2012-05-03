@@ -68,7 +68,11 @@ public class Transaction {
 	 * Takes the Transaction, checks that its balanced, and then adds it to the effected accounts. 
 	 */
 	public void process(){
-		
+		if(isBalanced()){
+			for(SubTransaction sub: subTransactions){
+				sub.getAccount().addTransaction(this);
+			}
+		}
 	}
 	
 }

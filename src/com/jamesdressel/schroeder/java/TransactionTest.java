@@ -2,10 +2,24 @@ package com.jamesdressel.schroeder.java;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TransactionTest {
-
+	SubTransaction one;
+	SubTransaction two;
+	Transaction example;
+	
+	@Before
+	public void initialize(){
+		one = new SubTransaction();
+		two = new SubTransaction();
+		one.setAmount(32432);
+		two.setAmount(32);
+		
+		example = new Transaction();
+	}
+	
 	@Test
 	public void testDefaultMemo() {
 		Transaction example = new Transaction();
@@ -21,12 +35,6 @@ public class TransactionTest {
 	
 	@Test
 	public void testSetSubTransactions(){
-		SubTransaction one = new SubTransaction();
-		SubTransaction two = new SubTransaction();
-		one.setAmount(32432);
-		two.setAmount(32);
-		
-		Transaction example = new Transaction();
 		example.addSubTransaction(one);
 		example.addSubTransaction(two);
 		
@@ -36,12 +44,6 @@ public class TransactionTest {
 
 	@Test
 	public void testRemoveSubTransaction(){
-		SubTransaction one = new SubTransaction();
-		SubTransaction two = new SubTransaction();
-		one.setAmount(32432);
-		two.setAmount(32);
-		
-		Transaction example = new Transaction();
 		example.addSubTransaction(one);
 		example.addSubTransaction(two);
 		

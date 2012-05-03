@@ -8,14 +8,17 @@ import org.junit.Test;
 public class TransactionTest {
 	SubTransaction one;
 	SubTransaction two;
+	SubTransaction three;
 	Transaction example;
 	
 	@Before
 	public void initialize(){
 		one = new SubTransaction();
 		two = new SubTransaction();
-		one.setAmount(32432);
+		three = new SubTransaction();
+		one.setAmount(-32);
 		two.setAmount(32);
+		three.setAmount(9);
 		
 		example = new Transaction();
 	}
@@ -67,7 +70,10 @@ public class TransactionTest {
 	
 	@Test
 	public void testIsBalancedNotBalanced(){
+		example.addSubTransaction(one);
+		example.addSubTransaction(three);
 		
+		assertFalse(example.isBalanced());
 	}
 	
 }

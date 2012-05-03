@@ -49,5 +49,9 @@ public class Transaction {
 		subTransactions.remove(subTrans);
 	}
 	
+	public boolean isBalanced(){
+		return false;
+	}
+	
 	
 }

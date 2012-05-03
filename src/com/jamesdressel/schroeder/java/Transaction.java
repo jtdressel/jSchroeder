@@ -72,6 +72,8 @@ public class Transaction {
 			for(SubTransaction sub: subTransactions){
 				sub.getAccount().addTransaction(this);
 			}
+		} else {
+			throw new IllegalStateException("Transactions must be balanced before they can be processed");
 		}
 	}
 	

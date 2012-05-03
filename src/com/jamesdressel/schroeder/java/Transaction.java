@@ -10,7 +10,7 @@ import java.util.UUID;
  * memo line, date/time,  and guid.
  */
 public class Transaction {
-	Set subTransactions;
+	Set<SubTransaction> subTransactions;
 	String memo;
 	UUID id;
 	Date date;

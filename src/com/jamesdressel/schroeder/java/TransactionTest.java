@@ -108,7 +108,7 @@ public class TransactionTest {
 	}
 	
 	@Test
-	public void testProcess(){
+	public void testProcessHappyPath(){
 		//Accounts should not have the transactions in them yet
 		assertFalse(from.getTransactions().contains(trans));
 		assertFalse(to.getTransactions().contains(trans));

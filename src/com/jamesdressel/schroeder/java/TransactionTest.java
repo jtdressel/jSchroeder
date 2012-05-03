@@ -59,11 +59,14 @@ public class TransactionTest {
 	public void testRemoveMissingSubTransaction(){
 		example.addSubTransaction(one);
 		example.addSubTransaction(two);
-		SubTransaction three = new SubTransaction();
+		SubTransaction aSubTransaction = new SubTransaction();
 		
-		assertFalse(example.getSubTransactions().contains(three));
-		example.removeSubTransaction(three);
-		
+		assertFalse(example.getSubTransactions().contains(aSubTransaction));
+		example.removeSubTransaction(aSubTransaction);
+	}
+	
+	@Test
+	public void testIsBalancedNotBalanced(){
 		
 	}
 	

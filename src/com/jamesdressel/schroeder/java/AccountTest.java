@@ -53,10 +53,7 @@ public class AccountTest {
 	@Test
 	public void testAddTransaction() {
 		to.addTransaction(trans);
-		
 		assertTrue(to.getTransactions().contains(trans));
-		
-		
 	}
 	
 	

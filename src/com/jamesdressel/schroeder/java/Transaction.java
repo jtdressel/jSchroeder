@@ -3,7 +3,8 @@ import java.util.Set;
 import java.util.HashSet;
 import java.util.Date;
 import java.util.UUID;
-
+import java.util.Dictionary;
+import java.util.Hashtable;
 /* The transaction class is used to represent a single transaction, such as 
  * buying groceries, or getting paid. There are at least two SubTransactions
  * one debiting an account, one crediting an account. In addition there is a 
@@ -14,10 +15,12 @@ public class Transaction {
 	String memo;
 	UUID id;
 	Date date;
+	Dictionary<Device, Date> syncedDate;
 	
 	public Transaction(){
 		subTransactions = new HashSet<SubTransaction>();
 		memo = "";
+		syncedDate = new Hashtable<Device, Date>();
 	}
 	
 	public String getMemo(){
@@ -78,4 +81,7 @@ public class Transaction {
 		}
 	}
 	
+	public void sync(Device device){
+		
+	}
 }

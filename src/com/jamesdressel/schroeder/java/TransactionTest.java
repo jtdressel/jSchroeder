@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
-
+import static org.hamcrest.CoreMatchers.*;
 public class TransactionTest {
 	SubTransaction one;
 	SubTransaction two;
@@ -137,5 +137,24 @@ public class TransactionTest {
 		trans.process();
 		
 	}
+	
+	@Test
+	public void testSyncDateNoPrior(){
+		//TODO: replace with mocking tools
+		trans.addSubTransaction(one);
+		trans.addSubTransaction(two);
+		
+		Device dev = new Device();
+		assertEquals(trans.syncedDate.get(dev), null);
+		
+		
+		trans.sync(dev);
+		
+		assertThat(trans.syncedDate.get(dev), not(equalTo(null)));
+		
+	}
+	//Date
+	
+	
 	
 }

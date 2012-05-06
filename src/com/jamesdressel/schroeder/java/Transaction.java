@@ -82,6 +82,7 @@ public class Transaction {
 	}
 	
 	public void sync(Device device){
-		
+		syncedDate.put(device, new Date());
+		//TODO Add the actual synching code. Currently it just pretends. 
 	}
 }
